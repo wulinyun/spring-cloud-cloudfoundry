@@ -2,7 +2,7 @@ spring:
   application:
     name: spring-cloud-client
   profiles:
-    active: prod #@spring.profiles.active@
+    active: dev #@spring.profiles.active@
 management:
   endpoints:
     web:
