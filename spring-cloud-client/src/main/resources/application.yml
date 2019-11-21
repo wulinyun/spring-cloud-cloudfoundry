@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: spring-cloud-client
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+
+# Swagger界面内容配置
+swagger:
+  title: spring-cloud-client-backend API接口文档
+  description: spring-cloud-client-backend Api Documentation
+  version: 1.0.0
+  show: true
+  contact:
+    name: wulinyun
+    url:
+    email: lin.wu@landasoft.com
+
+eureka:
+  #  instance:
+  #    nonSecurePort: 80
+  #    hostname: ${vcap.application.uris[0]}
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
