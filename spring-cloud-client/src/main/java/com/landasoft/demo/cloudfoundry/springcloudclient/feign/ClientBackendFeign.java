@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2019/8/9  14:18
  */
 @FeignClient(name = "spring-cloud-client-backend")
-public interface SpringCloudClientBackendFeign {
+public interface ClientBackendFeign {
     @RequestMapping("/call/{id}")
     String call(@PathVariable("id") String id);
 }
