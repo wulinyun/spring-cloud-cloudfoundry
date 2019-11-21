@@ -1,1 +1,13 @@
-
+spring:
+  application:
+    name: spring-cloud-gateway
+#security:
+#  basic:
+#    enabled: false
+ribbon:
+  eureka:
+    enable: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
