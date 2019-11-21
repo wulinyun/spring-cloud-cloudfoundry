@@ -4,8 +4,8 @@ eureka:
   #    hostname: ${vcap.application.uris[0]}
   client:
     serviceUrl:
-      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
+      defaultZone: https://spring-cloud-eureka.xxx.com/eureka/
 
   #自定义的参数
 custom:
-  restURL: https://spring-cloud-client-backend.lorealoperationsapac.com/call/
+  restURL: https://spring-cloud-client-backend.xxx.com/call/
