@@ -1,14 +1,10 @@
+server:
+  port: 9021
 spring:
   application:
     name: spring-cloud-gateway
-## cloud  cloudfoundry一定要配置false这一项，要不然gateway请求转发鉴权会被拦截
-security:
-  basic:
-    enabled: false
+  profiles:
+    active: prod #@spring.profiles.active@
 ribbon:
   eureka:
     enable: true
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/

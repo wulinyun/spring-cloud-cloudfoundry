@@ -1,0 +1,13 @@
+server:
+  port: 9021
+spring:
+  application:
+    name: spring-cloud-gateway
+
+ribbon:
+  eureka:
+    enable: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
