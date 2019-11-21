@@ -1,0 +1,7 @@
+eureka:
+  #  instance:
+  #    nonSecurePort: 80
+  #    hostname: ${vcap.application.uris[0]}
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/

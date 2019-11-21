@@ -1,7 +1,8 @@
 spring:
   application:
     name: spring-cloud-client
-
+  profiles:
+    active: prod #@spring.profiles.active@
 management:
   endpoints:
     web:
@@ -21,11 +22,3 @@ swagger:
     name: wulinyun
     url:
     email: lin.wu@landasoft.com
-
-eureka:
-  #  instance:
-  #    nonSecurePort: 80
-  #    hostname: ${vcap.application.uris[0]}
-  client:
-    serviceUrl:
-      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
