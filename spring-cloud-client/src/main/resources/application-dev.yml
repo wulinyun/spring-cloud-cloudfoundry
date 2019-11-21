@@ -4,4 +4,4 @@ eureka:
   #    hostname: ${vcap.application.uris[0]}
   client:
     serviceUrl:
-      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
+      defaultZone: http://localhost:9020/eureka/
