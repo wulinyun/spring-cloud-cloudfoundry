@@ -1,7 +1,12 @@
 eureka:
-#  instance:
-#    nonSecurePort: 80
-#    hostname: ${vcap.application.uris[0]}
+  instance:
+    #eureka客户端需要多长时间发送心跳给eureka服务器，表明他仍然活着，默认30秒
+    lease-renewal-interval-in-seconds: 5
+    #eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除
+    lease-expiration-duration-in-seconds: 10
+
   client:
+    #表示eureka client间隔多久去拉取服务器注册信息,默认为30秒
+    registry-fetch-interval-seconds: 30
     serviceUrl:
       defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
