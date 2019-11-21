@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,8 @@ public class HelloController {
 
     private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-
+    @Value("${custom.restURL}")
+    private String restURL;
     @Autowired
     @Qualifier("loadBalancedRestTemplate")
     private RestTemplate loadBalancedRestTemplate;
@@ -47,7 +49,7 @@ public class HelloController {
     @GetMapping("/call/{id}")
     public String callHome(@PathVariable String id){
         logger.info("calling from spring-cloud-client-backend");
-        String result= this.originRestTemplate.getForObject("https://spring-cloud-client-backend.lorealoperationsapac.com/" + id, String.class);
+        String result= this.originRestTemplate.getForObject(restURL + id, String.class);
         return result+" world";
     }
 

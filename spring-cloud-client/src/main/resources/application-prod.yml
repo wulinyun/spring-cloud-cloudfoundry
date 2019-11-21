@@ -5,3 +5,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
+
+  #自定义的参数
+custom:
+  restURL: https://spring-cloud-client-backend.lorealoperationsapac.com/call/
