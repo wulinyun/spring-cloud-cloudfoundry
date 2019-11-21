@@ -5,7 +5,7 @@ import org.springframework.boot.actuate.autoconfigure.security.servlet.Managemen
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-/** 警用spring security **/
+/** SpringBootApplication使用属性exclude禁用spring security **/
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class,ManagementWebSecurityAutoConfiguration.class })
 @EnableEurekaClient
 public class SpringCloudClientBackendApplication {

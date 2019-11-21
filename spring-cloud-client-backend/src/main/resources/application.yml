@@ -22,11 +22,6 @@ swagger:
     url:
     email: lin.wu@landasoft.com
 
-## cloud  cloudfoundry一定要配置false这一项，要不然gateway请求转发鉴权会被拦截
-security:
-  basic:
-    enabled: false
-
 eureka:
 #  instance:
 #    nonSecurePort: 80
