@@ -1,2 +1,7 @@
 server:
   port: 9020
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
