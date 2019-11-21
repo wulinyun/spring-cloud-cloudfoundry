@@ -31,10 +31,10 @@ public class HelloController {
         return new RestTemplate();
     }
     @GetMapping("/")
-    @ApiOperation(value = "hello接口信息")
+    @ApiOperation(value = "spring-cloud-client-backend接口信息")
     public String call(){
         logger.info("calling spring-cloud-client-backend");
-        return "hello"+new Date().toString();
+        return "hello spring-cloud-client-backend "+new Date().toString();
     }
 
     @GetMapping("/call/{id}")
