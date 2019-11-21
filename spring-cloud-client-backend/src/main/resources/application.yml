@@ -5,3 +5,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
+
+# Swagger界面内容配置
+swagger:
+  title: landa-mas-zipkin-stream-client-backend API接口文档
+  description: landa-mas-zipkin-stream-client-backend Api Documentation
+  version: 1.0.0
+  show: true
+  contact:
+    name: wulinyun
+    url:
+    email: lin.wu@landasoft.com
