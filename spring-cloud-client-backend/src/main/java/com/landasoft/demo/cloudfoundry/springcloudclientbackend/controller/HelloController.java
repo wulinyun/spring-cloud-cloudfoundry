@@ -32,22 +32,16 @@ public class HelloController {
     }
     @GetMapping("/")
     @ApiOperation(value = "hello接口信息")
-    public String call(@PathVariable String id){
-        logger.info("calling hello demo backend");
+    public String call(){
+        logger.info("calling spring-cloud-client-backend");
         return "hello"+new Date().toString();
     }
 
     @GetMapping("/call/{id}")
     @ApiOperation(value = "call返回接口信息")
     public String callHome(@PathVariable String id){
-        logger.info("calling trace demo backend");
+        logger.info("calling spring-cloud-client-backend "+id);
         return "hello"+id;
     }
-    @GetMapping("/call1/{id}")
-    @ApiOperation(value = "call返回其它服务接口信息")
-    public String callSpringBootDocker(@PathVariable String id){
-        logger.info("calling from trace demo backend spring-docker-demo");
-        String result= this.restTemplate.getForObject("http://localhost:8080/rest/image/listImageDatas?userId=" + id, String.class);
-        return result+" world";
-    }
+
 }
