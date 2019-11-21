@@ -1,9 +1,10 @@
 spring:
   application:
     name: spring-cloud-gateway
-#security:
-#  basic:
-#    enabled: false
+## cloud  cloudfoundry一定要配置false这一项，要不然gateway请求转发鉴权会被拦截
+security:
+  basic:
+    enabled: false
 ribbon:
   eureka:
     enable: true
