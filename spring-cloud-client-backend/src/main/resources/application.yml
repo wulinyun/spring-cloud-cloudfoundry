@@ -1,18 +1,36 @@
 spring:
   application:
     name: spring-cloud-client-backend
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
 
 # Swagger界面内容配置
 swagger:
-  title: landa-mas-zipkin-stream-client-backend API接口文档
-  description: landa-mas-zipkin-stream-client-backend Api Documentation
+  title: spring-cloud-client-backend API接口文档
+  description: spring-cloud-client-backend Api Documentation
   version: 1.0.0
   show: true
   contact:
     name: wulinyun
     url:
     email: lin.wu@landasoft.com
+
+## cloud  cloudfoundry一定要配置false这一项，要不然gateway请求转发鉴权会被拦截
+security:
+  basic:
+    enabled: false
+
+eureka:
+#  instance:
+#    nonSecurePort: 80
+#    hostname: ${vcap.application.uris[0]}
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
