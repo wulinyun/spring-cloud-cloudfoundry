@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-cloud-client-backend
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://spring-cloud-eureka.lorealoperationsapac.com/eureka/
