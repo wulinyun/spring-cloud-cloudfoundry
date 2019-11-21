@@ -4,7 +4,7 @@ spring:
   application:
     name: spring-cloud-gateway
   profiles:
-    active: prod #@spring.profiles.active@
+    active: dev #@spring.profiles.active@
 ribbon:
   eureka:
     enable: true

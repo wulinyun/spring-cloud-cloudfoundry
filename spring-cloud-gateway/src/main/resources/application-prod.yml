@@ -1,12 +1,3 @@
-server:
-  port: 9021
-spring:
-  application:
-    name: spring-cloud-gateway
-
-ribbon:
-  eureka:
-    enable: true
 eureka:
   client:
     serviceUrl:
