@@ -1,5 +1,5 @@
 package com.landasoft.demo.cloudfoundry.springcloudclient.controller;
-import com.landasoft.demo.cloudfoundry.springcloudclient.feign.SpringCloudClientBackendFeign;
+import com.landasoft.demo.cloudfoundry.springcloudclient.feign.ClientBackendFeign;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Date;
 
 /**
  * @author 伍林云
@@ -30,8 +32,14 @@ public class HelloController {
     @Qualifier("originRestTemplate")
     private RestTemplate originRestTemplate;
 
-    @Autowired
-    private SpringCloudClientBackendFeign springCloudClientBackendFeign;
+    @Autowired(required = false)
+    private ClientBackendFeign springCloudClientBackendFeign;
+    @GetMapping("/")
+    @ApiOperation(value = "spring-cloud-client接口信息")
+    public String call(){
+        logger.info("calling spring-cloud-client-backend");
+        return "hello spring-cloud-client-backend "+new Date().toString();
+    }
     /**
      * 直接调用接口地址
      * @param id
