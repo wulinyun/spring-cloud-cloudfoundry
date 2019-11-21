@@ -34,6 +34,11 @@
             <groupId>io.pivotal.spring.cloud</groupId>
             <artifactId>spring-cloud-services-starter-service-registry</artifactId>
         </dependency>
+        <!--引入feign依赖  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!-- 启用 Actuator 的端点提供Spring Boot所有的production-ready特性 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
