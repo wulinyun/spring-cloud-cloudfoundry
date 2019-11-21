@@ -31,8 +31,6 @@ public class HelloController {
     @Autowired
     @Qualifier("originRestTemplate")
     private RestTemplate originRestTemplate;
-
-    @Autowired(required = false)
     private ClientBackendFeign springCloudClientBackendFeign;
     @GetMapping("/")
     @ApiOperation(value = "spring-cloud-client接口信息")
