@@ -2,3 +2,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9020/eureka/
+
+#动态路由配置
+zuul:
+  sensitive-headers: Token
+  ignored-headers: Access-Control-Allow-Origin
+  routes:
+    SpringCloudClientApi:
+      path: /SpringCloudClientApi/**
+      serviceId: spring-cloud-client
+      stripPrefix: true
+    SpringCloudClientBackendApi:
+      path: /SpringCloudClientBackendApi/**
+      serviceId: spring-cloud-client-backend
+      stripPrefix: true
